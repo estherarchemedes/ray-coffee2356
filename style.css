@@ -270,59 +270,120 @@ item button:hover {
   background: #c28f5c;
   color: white;
 }
+/* CONTACT SECTION */
+.contact {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
 
-/* SOCIAL MEDIA CARD */
-.social-card {
-  background: #fff;
-  padding: 20px;
-  margin: 0 auto 30px auto;
-  width: 280px;
+.contact-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  background: rgba(0,0,0,0.5);
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 30px;
 }
 
-.social-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+/* ⭐ SOCIAL ICON FIXES */
+.social-card a {
+  background: rgba(255,255,255,0.2);
+  padding: 12px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+  transition: .3s;
+  color: #fff;
 }
 
-.social-icon svg {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s;
+.social-card a:hover {
+  background: #ff8c00;
+  color: #fff;
+  transform: scale(1.1);
 }
 
-.social-icon:hover svg {
-  transform: scale(1.2) rotate(10deg);
+.social-card svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
 }
 
-/* CONTACT FORM CARD */
+/* CONTACT CARD */
 .contact-card {
-  background: ghostwhite;
-  padding: 30px 25px;
+  width: 100%;
   max-width: 500px;
-  margin: 0 auto;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: rgba(0,0,0,0.4);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  margin-top: 20px;
 }
 
-.contact-card:hover {
-  transform: translateY(-3px);
-  
+/* INPUTS */
+.input-group {
+  position: relative;
+  margin: 15px 0;
 }
 
-/* FADE-IN ANIMATION */
-.contact-card, .social-card {
-  opacity: 0;
-  animation: fadeInUp 1s forwards;
-  animation-delay: 0.3s;
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  background: rgba(255,255,255,0.9);
+  color: #333;
+  transition: all 0.3s ease;
 }
 
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px);}
-  100% { opacity: 1; transform: translateY(0);}
+.input-group label {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: #666;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* BUTTON */
+.contact-card button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 25px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  background: #d2691e;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.contact-card button:hover {
+  background: #ff8c00;
+  transform: scale(1.05);
 }
